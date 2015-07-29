@@ -26,6 +26,9 @@ class Time4SSpec extends WordSpec {
       assert(yesterday.getYear == 2011)
       assert(yesterday.getMonth == java.time.Month.AUGUST)
       assert(yesterday.getDayOfMonth == 18)
+
+      val yesterday2 = birthday - 1.days
+      assert(yesterday == yesterday2)
     }
 
   }

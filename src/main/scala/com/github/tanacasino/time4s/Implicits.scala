@@ -6,8 +6,14 @@ import java.time.LocalDateTime
 import com.github.tanacasino.time4s.wrappers._
 
 
-trait Implicits extends DateTimeImplicits
+trait Implicits extends DateTimeImplicits with IntImplicits
 
+
+trait IntImplicits {
+
+  implicit def toRichInt(value: Int): RichInt = new RichInt(value)
+
+}
 
 trait DateTimeImplicits {
 
