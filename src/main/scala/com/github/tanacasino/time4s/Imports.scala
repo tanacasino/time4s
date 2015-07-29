@@ -22,7 +22,7 @@ object StaticTypeImports extends StaticTypeImports
 
 trait StaticTypeImports {
 
-  val LocalDateTime = com.github.tanacasino.time4s.static.StaticLocalDateTime
+  val LocalDateTime = com.github.tanacasino.time4s.wrappers.objects.StaticLocalDateTime
 
 }
 
