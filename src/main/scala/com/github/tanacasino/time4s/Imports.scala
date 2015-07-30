@@ -24,5 +24,7 @@ trait StaticTypeImports {
 
   val LocalDateTime = com.github.tanacasino.time4s.wrappers.objects.StaticLocalDateTime
 
+  val ZonedDateTime = com.github.tanacasino.time4s.wrappers.objects.StaticZonedDateTime
+
 }
 

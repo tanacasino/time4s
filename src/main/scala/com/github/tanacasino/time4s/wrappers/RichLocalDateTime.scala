@@ -22,5 +22,19 @@ class RichLocalDateTime(val value: LocalDateTime) extends AnyVal with PimpedType
 
   def -(amountToMinus: Long, unit: TemporalUnit) = value.minus(amountToMinus, unit)
 
+  def tommorow = value.plusDays(1)
+
+  def nextDay = value.plusDays(1)
+
+  def nextMonth = value.plusMonths(1)
+
+  def nextYear = value.plusYears(1)
+
+  def lastDay = value.minusDays(1)
+
+  def lastMonth = value.minusMonths(1)
+
+  def lastYear = value.minusYears(1)
+
 }
 

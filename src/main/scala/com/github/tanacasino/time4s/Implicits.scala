@@ -1,7 +1,7 @@
 package com.github.tanacasino.time4s
 
 
-import java.time.LocalDateTime
+import java.time._
 
 import com.github.tanacasino.time4s.wrappers._
 
@@ -18,6 +18,8 @@ trait IntImplicits {
 trait DateTimeImplicits {
 
   implicit def richLocalDateTime(ldt: LocalDateTime): RichLocalDateTime = new RichLocalDateTime(ldt)
+
+  implicit def richZonedDateTime(ldt: ZonedDateTime): RichZonedDateTime = new RichZonedDateTime(ldt)
 
 }
 

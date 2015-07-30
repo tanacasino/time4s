@@ -29,6 +29,14 @@ class Time4SSpec extends WordSpec {
 
       val yesterday2 = birthday - 1.days
       assert(yesterday == yesterday2)
+
+      val zonedDateTime = ZonedDateTime.now
+      val x = zonedDateTime + 1
+      assert(x != zonedDateTime)
+      val y = zonedDateTime - 1
+      assert(y != zonedDateTime)
+      assert(x - 1 == zonedDateTime)
+      assert(y + 1 == zonedDateTime)
     }
 
   }
