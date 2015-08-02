@@ -13,7 +13,10 @@ trait IntImplicits {
 
   implicit def toRichInt(value: Int): RichInt = new RichInt(value)
 
+  implicit def toRichLong(value: Long): RichLong = new RichLong(value)
+
 }
+
 
 trait DateTimeImplicits {
 

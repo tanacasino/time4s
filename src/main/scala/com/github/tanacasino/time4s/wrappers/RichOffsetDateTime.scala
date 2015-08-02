@@ -7,7 +7,6 @@ import java.time.temporal._
 import com.github.tanacasino.time4s.core.PimpedType
 
 
-
 class RichOffsetDateTime(val value: OffsetDateTime) extends AnyVal with PimpedType[OffsetDateTime] {
 
   def +(days: Long) = value.plusDays(days)
