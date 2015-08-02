@@ -6,7 +6,7 @@ import java.time._
 import com.github.tanacasino.time4s.wrappers._
 
 
-trait Implicits extends DateTimeImplicits with IntImplicits
+trait Implicits extends DateTimeImplicits with TemporalImplicits with IntImplicits
 
 
 trait IntImplicits {
@@ -22,7 +22,13 @@ trait DateTimeImplicits {
 
   implicit def richLocalDateTime(ldt: LocalDateTime): RichLocalDateTime = new RichLocalDateTime(ldt)
 
+  implicit def richOffsetDateTime(ldt: OffsetDateTime): RichOffsetDateTime = new RichOffsetDateTime(ldt)
+
   implicit def richZonedDateTime(ldt: ZonedDateTime): RichZonedDateTime = new RichZonedDateTime(ldt)
 
 }
 
+
+trait TemporalImplicits {
+  implicit def richPeriod(period: Period): RichPeriod = new RichPeriod(period)
+}

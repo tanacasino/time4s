@@ -40,6 +40,13 @@ class Time4SSpec extends WordSpec {
       assert(y != zonedDateTime)
       assert(x - 1 == zonedDateTime)
       assert(y + 1 == zonedDateTime)
+
+      assert(x - 1.day == zonedDateTime)
+      assert(y + 1.day == zonedDateTime)
+
+      val offsetDateTime = OffsetDateTime.now
+      assert(offsetDateTime - 1.day + 1.day == offsetDateTime)
+      assert(offsetDateTime + (-1.day + 1.day) == offsetDateTime)
     }
 
   }
