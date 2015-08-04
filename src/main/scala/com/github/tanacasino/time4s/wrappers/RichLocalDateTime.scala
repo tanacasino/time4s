@@ -7,7 +7,6 @@ import java.time.temporal._
 import com.github.tanacasino.time4s.core.PimpedType
 
 
-// NOTE: AnyVal がいいのか？AnyRefがいいのか？差を調べる
 class RichLocalDateTime(val value: LocalDateTime) extends AnyVal with PimpedType[LocalDateTime] {
 
   def +(days: Long) = value.plusDays(days)
@@ -29,6 +28,8 @@ class RichLocalDateTime(val value: LocalDateTime) extends AnyVal with PimpedType
   def nextMonth = value.plusMonths(1)
 
   def nextYear = value.plusYears(1)
+
+  def yesterday = value.minusDays(1)
 
   def lastDay = value.minusDays(1)
 
