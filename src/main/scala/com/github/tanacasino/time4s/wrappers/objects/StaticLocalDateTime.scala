@@ -11,6 +11,8 @@ object StaticLocalDateTime extends StaticLocalDateTime
 
 trait StaticLocalDateTime {
 
+  def from(temporal: TemporalAccessor) = LocalDateTime.from(temporal)
+
   def now: LocalDateTime = LocalDateTime.now
 
   def now(zone: ZoneId) = LocalDateTime.now(zone)
@@ -41,8 +43,6 @@ trait StaticLocalDateTime {
 
   def ofEpochSecond(epochSecond: Long, nanoOfSecond: Int, offset: ZoneOffset) =
     LocalDateTime.ofEpochSecond(epochSecond, nanoOfSecond, offset)
-
-  def from(temporal: TemporalAccessor) = LocalDateTime.from(temporal)
 
   def parse(text: CharSequence) = LocalDateTime.parse(text)
 
