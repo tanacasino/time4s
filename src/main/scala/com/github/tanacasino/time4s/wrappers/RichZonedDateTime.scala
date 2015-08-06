@@ -9,16 +9,16 @@ import com.github.tanacasino.time4s.core.PimpedType
 
 class RichZonedDateTime(val value: ZonedDateTime) extends AnyVal with PimpedType[ZonedDateTime] {
 
-  def +(days: Long) = value.plusDays(days)
+  def +(days: Long): ZonedDateTime = value.plusDays(days)
 
-  def +(amountToAdd: TemporalAmount) = value.plus(amountToAdd)
+  def +(amountToAdd: TemporalAmount): ZonedDateTime = value.plus(amountToAdd)
 
-  def +(amountToAdd: Long, unit: TemporalUnit) = value.plus(amountToAdd, unit)
+  def +(amountToAdd: Long, unit: TemporalUnit): ZonedDateTime = value.plus(amountToAdd, unit)
 
-  def -(days: Long) = value.minusDays(days)
+  def -(days: Long): ZonedDateTime = value.minusDays(days)
 
-  def -(amountToMinus: TemporalAmount) = value.minus(amountToMinus)
+  def -(amountToMinus: TemporalAmount): ZonedDateTime = value.minus(amountToMinus)
 
-  def -(amountToMinus: Long, unit: TemporalUnit) = value.minus(amountToMinus, unit)
+  def -(amountToMinus: Long, unit: TemporalUnit): ZonedDateTime = value.minus(amountToMinus, unit)
 
 }

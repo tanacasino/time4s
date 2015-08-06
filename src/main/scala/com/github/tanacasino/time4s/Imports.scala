@@ -14,6 +14,10 @@ trait TypeImports {
 
   type LocalDateTime = java.time.LocalDateTime
 
+  type OffsetDateTime = java.time.OffsetDateTime
+
+  type ZonedDateTime = java.time.ZonedDateTime
+
 }
 
 

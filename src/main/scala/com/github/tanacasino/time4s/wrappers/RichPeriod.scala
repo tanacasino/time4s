@@ -8,11 +8,11 @@ import com.github.tanacasino.time4s.core.PimpedType
 
 class RichPeriod(val value: Period) extends AnyVal with PimpedType[Period] {
 
-  def days = value.getDays
+  def days: Int = value.getDays
 
-  def months = value.getMonths
+  def months: Int = value.getMonths
 
-  def years = value.getYears
+  def years: Int = value.getYears
 
   def unary_- : Period = value.negated
 
@@ -21,5 +21,6 @@ class RichPeriod(val value: Period) extends AnyVal with PimpedType[Period] {
   def +(period: Period): Period = value.plus(period)
 
   def *(scalar: Int): Period = value.multipliedBy(scalar)
+
 }
 

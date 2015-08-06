@@ -11,9 +11,9 @@ trait Implicits extends DateTimeImplicits with TemporalImplicits with IntImplici
 
 trait IntImplicits {
 
-  implicit def toRichInt(value: Int): RichInt = new RichInt(value)
+  implicit def richInt(value: Int): RichInt = new RichInt(value)
 
-  implicit def toRichLong(value: Long): RichLong = new RichLong(value)
+  implicit def richLong(value: Long): RichLong = new RichLong(value)
 
 }
 
@@ -30,5 +30,9 @@ trait DateTimeImplicits {
 
 
 trait TemporalImplicits {
+
   implicit def richPeriod(period: Period): RichPeriod = new RichPeriod(period)
+
+  implicit def richDuration(duration: Duration): RichDuration = new RichDuration(duration)
+
 }
