@@ -35,4 +35,6 @@ trait TemporalImplicits {
 
   implicit def richDuration(duration: Duration): RichDuration = new RichDuration(duration)
 
+  implicit def richInstant(instant: Instant): RichInstant = new RichInstant(instant)
+
 }

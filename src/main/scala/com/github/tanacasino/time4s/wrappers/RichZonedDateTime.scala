@@ -20,5 +20,4 @@ class RichZonedDateTime(val value: ZonedDateTime) extends AnyVal with PimpedType
   def -(amountToMinus: TemporalAmount): ZonedDateTime = value.minus(amountToMinus)
 
   def -(amountToMinus: Long, unit: TemporalUnit): ZonedDateTime = value.minus(amountToMinus, unit)
-
 }

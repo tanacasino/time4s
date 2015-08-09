@@ -44,3 +44,4 @@ trait StaticZonedDateTime {
     ZonedDateTime.parse(text, formatter)
 
 }
+
